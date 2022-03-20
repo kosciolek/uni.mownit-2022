@@ -1,3 +1,11 @@
+
+- [Zadanie 1](#zadanie-1)
+  - [Wyniki](#wyniki)
+- [Zadanie 2](#zadanie-2)
+  - [Wyniki](#wyniki-1)
+- [Zadanie 3](#zadanie-3)
+  - [Wyniki](#wyniki-2)
+  
 # Zadanie 1
 
 ```c
@@ -87,7 +95,7 @@ Może to wynikać z faktu, że pierwsze obliczenie korzystało z wartości pośr
 
 # Zadanie 3
 
-Wartości epsilon (najmniejszej wartości takiej, że `1 + e > 1`) szukamy metodą bisekcji.
+Wartości epsilon (najmniejszej wartości takiej, że `1 + e > 1`) szukamy metodą biisekcji.sekcji.
 
 ```c
 #include <stdio.h>
@@ -115,7 +123,8 @@ int main() {
 }
 ```
 
-Wynik:
+## Wyniki
+
 ```
 Epsilon is: 1.110223e-16
 ```
