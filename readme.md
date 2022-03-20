@@ -85,4 +85,39 @@ x{n} + 3.0 * x{n} * (1 - x{n}) | n = 500000 | float:0.086346 double:1.285257
 Wyniki drugiego obliczenia są do siebie bardziej zbliżone niż poprzednio, mimo że oba wzory są matematycznie jednoznaczne. 
 Może to wynikać z faktu, że pierwsze obliczenie korzystało z wartości pośredniej `1 - x{n}`, a drugie korzysta wyłącznie bezpośrednio z `x{n}`.
 
-## Zadanie 3
+# Zadanie 3
+
+Wartości epsilon (najmniejszej wartości takiej, że `1 + e > 1`) szukamy metodą bisekcji.
+
+```c
+#include <stdio.h>
+
+double find_epsilon_with_double() {
+    double e = 0;
+    double prev_e = 1;
+    double mid = 0;
+
+    const int iterations = 100000;
+    for (int i = 0; i < iterations; i++) {
+        mid = e + (prev_e - e) / 2.0;
+        if(mid + 1 > 1) 
+            prev_e = mid;
+        else e = mid;
+    }
+    
+    return prev_e;
+}
+
+int main() {
+   const double epsilon = find_epsilon_with_double();
+   printf("Epsilon is: %e\n", epsilon);
+   return 0;
+}
+```
+
+Wynik:
+```
+Epsilon is: 1.110223e-16
+```
+
+Zwiększenie liczby iteracji nie powoduje dalszych zmian w wyniku, więc dotarliśmy do "maszynowego epsilona".
