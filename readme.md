@@ -95,7 +95,7 @@ Może to wynikać z faktu, że pierwsze obliczenie korzystało z wartości pośr
 
 # Zadanie 3
 
-Wartości epsilon (najmniejszej wartości takiej, że `1 + e > 1`) szukamy metodą biisekcji.sekcji.
+Wartości epsilon (najmniejszej wartości takiej, że `1 + e > 1`) szukamy metodą bisekcji.
 
 ```c
 #include <stdio.h>
